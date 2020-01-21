@@ -115,3 +115,26 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+" Fix grey background color on solarized scheme
+set background=dark
+let g:solarized_termcolors=256
+colorscheme gruvbox
+
+" Set cursor shape in different modes
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_SI.="\e[5 q" "SI = INSERT mode
+
+" Cursor settings:
+"  1 -> blinking block
+"  2 -> solid block
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
+
+" Eliminating delays on ESC in vim
+set timeoutlen=1000 " timeoutlen is used for mapping delays
+set ttimeoutlen=0   " ttimeoutlen is used for keycode delays
+
